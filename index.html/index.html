@@ -1,0 +1,186 @@
+<html>
+<head>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    .sidebar {
+      width: 15%;
+      height: 100vh;
+      background-color: #0f4c75;
+      position: fixed;
+      left: 0;
+      top: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-family: Arial, sans-serif;
+      color: white;
+    }
+
+    .sidebar img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      margin-top: 20px;
+    }
+
+    .sidebar ul {
+      list-style: none;
+      width: 100%;
+    }
+
+    .sidebar li {
+      padding: 15px;
+      text-align: center;
+      border-bottom: 1px solid white;
+    }
+
+    .sidebar li:hover {
+      background-color: #3282b8;
+      cursor: pointer;
+    }
+
+    .main {
+      width: 85%;
+      height: 100vh;
+      background-color: #1b262c;
+      position: absolute;
+      right: 0;
+      top: 0;
+      overflow-y: scroll;
+      font-family: Arial, sans-serif;
+      color: white;
+    }
+
+    .post {
+      width: 80%;
+      margin: 20px auto;
+      background-color: #0f4c75;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .post h3 {
+      margin-bottom: 10px;
+    }
+
+    .post p {
+      margin-bottom: 20px;
+    }
+
+    .post button {
+      padding: 10px 20px;
+      background-color: #3282b8;
+      border: none;
+      border-radius: 5px;
+      color: white;
+      font-weight: bold;
+    }
+
+    .post button:hover {
+      background-color: #bbe1fa;
+      color: #0f4c75;
+      cursor: pointer;
+    }
+
+    .suggestions {
+      width: 15%;
+      height: 100vh;
+      background-color: #1b262c;
+      position: fixed;
+      right: 0;
+      top: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-family: Arial, sans-serif;
+      color: white;
+    }
+
+    .suggestions h2 {
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+
+    .suggestions ul {
+      list-style: none;
+      width: 100%;
+    }
+
+    .suggestions li {
+      padding: 15px;
+      text-align: center;
+      border-bottom: 1px solid white;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+    }
+
+    .suggestions li img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+    }
+
+    .suggestions li span {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="sidebar">
+    <img src="data:image/jpeg;base64,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" alt="user">
+    <ul>
+      <li>Home</li>
+      <li>Notifications</li>
+      <li>Messages</li>
+      <li>Collection</li>
+      <li>Subscription</li>
+      <li>Profile</li>
+      <li>Login</li>
+      <li>Register</li>
+    </ul>
+  </div>
+  <div class="main">
+    <div class="post">
+      <h3>What's happening?</h3>
+      <p><input type="text" placeholder="Write something..."></p>
+      <button>PUBLISH POST</button>
+    </div>
+    <div class="post">
+      <h3>Ammar Massoud @ammarmassoud</h3>
+      <p>Hi there I am feeling very good by making the post as it is now </p>
+      <button>SEND TIP</button>
+    </div>
+    <div class="post">
+      <h3>Ammar Massoud @ammarmassoud</h3>
+      <p>Hi there I am feeling very good by making the post as it is now 😊😊😊😊😊</p>
+      <button>SEND TIP</button>
+    </div>
+  </div>
+  <div class="suggestions">
+    <h2>Suggestions</h2>
+    <ul>
+      <li>
+        <img src="https://www.google.com/imgres?imgurl=https%3A%2F%2Fe7.pngegg.com%2Fpngimages%2F813%2F118%2Fpng-clipart-silhouette-icon-blank-person-template-share-icon-black-and-white.png&tbnid=rnn6G-IniDE_dM&vet=12ahUKEwiQpPLoh7iEAxUIYKQEHQURCWsQMyghegUIARC8AQ..i&imgrefurl=https%3A%2F%2Fwww.pngegg.com%2Far%2Fpng-bdlbc&docid=67w34ZK8CKNHQM&w=900&h=900&q=%D8%B5%D9%88%D8%B1%D8%A9&ved=2ahUKEwiQpPLoh7iEAxUIYKQEHQURCWsQMyghegUIARC8AQ" alt="ammar">
+        <span>Mohamed </span>
+        <span>Chief Technology Officer</span>
+      </li>
+      <li>
+        <img src="https://www.google.com/imgres?imgurl=https%3A%2F%2Fe7.pngegg.com%2Fpngimages%2F813%2F118%2Fpng-clipart-silhouette-icon-blank-person-template-share-icon-black-and-white.png&tbnid=rnn6G-IniDE_dM&vet=12ahUKEwiQpPLoh7iEAxUIYKQEHQURCWsQMyghegUIARC8AQ..i&imgrefurl=https%3A%2F%2Fwww.pngegg.com%2Far%2Fpng-bdlbc&docid=67w34ZK8CKNHQM&w=900&h=900&q=%D8%B5%D9%88%D8%B1%D8%A9&ved=2ahUKEwiQpPLoh7iEAxUIYKQEHQURCWsQMyghegUIARC8AQ" alt="ammar">
+        <span>Khaled</span>
+        <span>Chief Technology Officer</span>
+      </li>
+      <li>
+        <img src="https://www.google.com/imgres?imgurl=https%3A%2F%2Fe7.pngegg.com%2Fpngimages%2F813%2F118%2Fpng-clipart-silhouette-icon-blank-person-template-share-icon-black-and-white.png&tbnid=rnn6G-IniDE_dM&vet=12ahUKEwiQpPLoh7iEAxUIYKQEHQURCWsQMyghegUIARC8AQ..i&imgrefurl=https%3A%2F%2Fwww.pngegg.com%2Far%2Fpng-bdlbc&docid=67w34ZK8CKNHQM&w=900&h=900&q=%D8%B5%D9%88%D8%B1%D8%A9&ved=2ahUKEwiQpPLoh7iEAxUIYKQEHQURCWsQMyghegUIARC8AQ" alt="ammar">
+        <span>Ali</span>
+        <span>Chief Technology Officer</span>
+      </li>
+    </ul>
+  </div>
+</body>
+</html>

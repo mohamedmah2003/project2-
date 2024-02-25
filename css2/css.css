@@ -1,0 +1,196 @@
+    /* Style the body */
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        background-image: url("background.jpg"); /* Replace with your own image URL */
+        background-size: cover;
+        background-position: center;
+      }
+  
+      /* Style the logo */
+      .logo {
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+      }
+  
+      /* Style the form */
+      .form {
+        width: 400px;
+        height: 600px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+      }
+  
+      /* Style the form title */
+      .form h1 {
+        text-align: center;
+        font-size: 24px;
+        color: #333;
+        margin-bottom: 20px;
+      }
+  
+      /* Style the form subtitle */
+      .form p {
+        text-align: center;
+        font-size: 18px;
+        color: #666;
+        margin-bottom: 10px;
+      }
+  
+      /* Style the social sign up buttons */
+      .social-signup {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+  
+      /* Style the social sign up buttons */
+      .social-signup button {
+        width: 150px;
+        height: 40px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: bold;
+        color: white;
+      }
+  
+      /* Style the Facebook button */
+      .social-signup .facebook {
+        background-color: #3b5998;
+        margin-right: 10px;
+      }
+  
+      /* Style the Google button */
+      .social-signup .google {
+        background-color: #dd4b39;
+        margin-left: 10px;
+      }
+  
+      /* Style the separator */
+      .separator {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+  
+      /* Style the separator line */
+      .separator-line {
+        width: 100%;
+        height: 1px;
+        background-color: #ddd;
+      }
+  
+      /* Style the separator text */
+      .separator-text {
+        width: 50px;
+        text-align: center;
+        font-size: 14px;
+        color: #999;
+        margin: 0 10px;
+      }
+  
+      /* Style the input fields */
+      .input-field {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+  
+      /* Style the input icons */
+      .input-icon {
+        width: 40px;
+        height: 40px;
+        background-color: #eee;
+        border-radius: 5px 0 0 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+  
+      /* Style the input icons */
+      .input-icon i {
+        font-size: 20px;
+        color: #999;
+      }
+  
+      /* Style the input boxes */
+      .input-box {
+        width: 360px;
+        height: 40px;
+        border: none;
+        border-radius: 0 5px 5px 0;
+        padding: 10px;
+        font-size: 16px;
+        color: #333;
+        outline: none;
+      }
+  
+      /* Style the terms and conditions checkbox */
+      .terms-and-conditions {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+  
+      /* Style the terms and conditions checkbox */
+      .terms-and-conditions input {
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+        cursor: pointer;
+      }
+  
+      /* Style the terms and conditions label */
+      .terms-and-conditions label {
+        font-size: 14px;
+        color: #666;
+        cursor: pointer;
+      }
+  
+      /* Style the register button */
+      .register-button {
+        width: 100%;
+        height: 40px;
+        border: none;
+        border-radius: 5px;
+        background-color: #4caf50;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: bold;
+        color: white;
+      }
+  
+      /* Style the sign in link */
+      .sign-in-link {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+      }
+  
+      /* Style the sign in link */
+      .sign-in-link a {
+        font-size: 14px;
+        color: #666;
+        text-decoration: none;
+      }
+  
+      /* Style the sign in link on hover */
+      .sign-in-link a:hover {
+        color: #333;
+        text-decoration: underline;
+      }
